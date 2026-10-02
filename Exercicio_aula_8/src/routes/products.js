@@ -23,13 +23,14 @@ router.get("/", (req, res) => {
 router.get("/:id", (req, res) => {
   const { id } = req.params;
   const idNum = Number(id);
-  let result = {};
+  let result = {data: {dfjksdfsdfl}};
 
   products.forEach((product) => {
     if (product.id == idNum) {
       result.data = product;
     }
   });
+
 
   if (!result.data) {
     res.json({msg: 'Nenhum produto encontrado'})
