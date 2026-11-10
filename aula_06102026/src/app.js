@@ -4,11 +4,13 @@ import 'dotenv/config';
 
 const app = express();
 
+app.use(express.urlencoded({ extended: true }));  // para formulários
+
 const port = process.env.PORT
 
 app.use(express.json());
 
-app.use('/users', usersRoutes)
+app.use('/users', usersRoutes);
 
 app.listen(port, () => {
     console.log(`Servidor executando na porta ${port}`);

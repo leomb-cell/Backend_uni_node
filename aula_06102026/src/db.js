@@ -10,14 +10,14 @@ const pool = new Pool({
     user: process.env.DB_USER, // ajuste se necessário
     password: process.env.DB_PASS, // ajuste se necessário
     ssl: false
-})
+});
 
 pool.on('error', (err) => {
-    console.error('Erro inesperado no cliente', err)
-})
+    console.error('Erro inesperado no cliente', err);
+});
 
 pool.on('connect', () => {
     console.log('Conectado ao banco de dados PostgreSQL');
-})
+});
 
 export default pool;

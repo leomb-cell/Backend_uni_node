@@ -10,7 +10,7 @@ class UsersRepository {
       const result = await pool.query(query);
       return result.rows;
     } catch (error) {
-      console.error("Erro ao buscar usuaris:", error);
+      console.error("Erro ao buscar usuarios:", error);
       throw error;
     }
   }
